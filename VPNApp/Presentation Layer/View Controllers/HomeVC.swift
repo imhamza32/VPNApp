@@ -97,7 +97,7 @@ class HomeVC: BaseClass {
             }
         } else {
             
-            if IAPService.instance.isSubscriptionActive() {
+//            if IAPService.instance.isSubscriptionActive() {
 //                || !DataManager.shared.oneMonthCompleted() || DataManager.shared.totalRemainingFreeTime > 0 {
                 
                 if selectedServer != nil {} else {
@@ -110,11 +110,11 @@ class HomeVC: BaseClass {
                     self.configureVPN(serverAddress: String(selectedServer.serverId.dropLast(4)), username: "zfzA9pY-VwKJh6Vw_RWIfZW1", password: "OSxVuIfTYWBKPIX1afZCUaph")
                 }
                 
-            } else {
-                self.showAlert(title: AC.Alert, message: "You need to buy premium to use the app.") {
-                    self.pushVC(id: BuyPremiumVC.id)
-                }
-            }
+//            } else {
+//                self.showAlert(title: AC.Alert, message: "You need to buy premium to use the app.") {
+//                    self.pushVC(id: BuyPremiumVC.id)
+//                }
+//            }
         }
     }
     
