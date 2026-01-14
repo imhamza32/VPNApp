@@ -302,7 +302,12 @@ class HomeVC: BaseClass {
                 self.loadProviderManager {
                     self.activityIndicatorView.startAnimating()
                     print(selectedServer)
-                    self.configureVPN(serverAddress: String(selectedServer.serverId.dropLast(4)), username: "zfzA9pY-VwKJh6Vw_RWIfZW1", password: "OSxVuIfTYWBKPIX1afZCUaph")
+                    let service = Bundle.main.bundleIdentifier ?? "app.vpnfast.com"
+                    
+                    let vpnUser: String? = KeychainHelper.shared.read(service: service, account: "vpn_username")
+                    let vpnPass: String? = KeychainHelper.shared.read(service: service, account: "vpn_password")
+
+                    self.configureVPN(serverAddress: String(selectedServer.serverId.dropLast(4)), username: vpnUser, password: "vpn_password")
                 }
                 
             } else {
