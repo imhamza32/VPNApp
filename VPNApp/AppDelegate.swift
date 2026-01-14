@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if !DataManager.shared.isOpeningDateSet {
             DataManager.shared.isOpeningDateSet = true
         }
+        
+        
         SKPaymentQueue.default().add(IAPService.instance)
         // Override point for customization after application launch.
         return true

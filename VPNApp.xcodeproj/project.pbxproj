@@ -72,6 +72,7 @@
 		04E3A8DC2A48CB7B00D1E0EA /* IntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3A8DB2A48CB7B00D1E0EA /* IntroVC.swift */; };
 		63D4B84F6013B9302D914E55 /* Pods_VPNTunnel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8330F6C4B9BF6FCE46479C27 /* Pods_VPNTunnel.framework */; };
 		D1E4B14D5E4EF324CCF52E06 /* Pods_VPNApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84264FD23A37C3C433ECB5B /* Pods_VPNApp.framework */; };
+		D906D2ED2F171D37002A563B /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D906D2EC2F171D37002A563B /* KeychainHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +175,7 @@
 		8D3643E197288574720EE3CC /* Pods-VPNApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPNApp.debug.xcconfig"; path = "Target Support Files/Pods-VPNApp/Pods-VPNApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A3AEF44736913E583010A8DE /* Pods-VPNTunnel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPNTunnel.release.xcconfig"; path = "Target Support Files/Pods-VPNTunnel/Pods-VPNTunnel.release.xcconfig"; sourceTree = "<group>"; };
 		C62F4C8982C6B9D4BDA7E604 /* Pods-VPNTunnel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPNTunnel.debug.xcconfig"; path = "Target Support Files/Pods-VPNTunnel/Pods-VPNTunnel.debug.xcconfig"; sourceTree = "<group>"; };
+		D906D2EC2F171D37002A563B /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		F84264FD23A37C3C433ECB5B /* Pods_VPNApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VPNApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -312,6 +314,7 @@
 		049120D629E60A9E00E270FE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				D906D2EC2F171D37002A563B /* KeychainHelper.swift */,
 				04E3A8D62A48230100D1E0EA /* IAPManager.swift */,
 				048777AE2A44EC4700229449 /* BaseClass.swift */,
 				049120D729E60A9E00E270FE /* Constants.swift */,
@@ -626,9 +629,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VPNApp/Pods-VPNApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VPNApp/Pods-VPNApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -669,6 +676,7 @@
 				049120FE29E60A9E00E270FE /* Protocols.swift in Sources */,
 				0456F61629E73A3F00AE9AB0 /* PremiumCell.swift in Sources */,
 				0456F61229E7313F00AE9AB0 /* ServersListVC.swift in Sources */,
+				D906D2ED2F171D37002A563B /* KeychainHelper.swift in Sources */,
 				0491211529E60AD400E270FE /* API Paths.swift in Sources */,
 				049120F829E60A9E00E270FE /* Extension.swift in Sources */,
 				046D4D6D2A7C5CBF0037A66A /* SpeedTestVC.swift in Sources */,

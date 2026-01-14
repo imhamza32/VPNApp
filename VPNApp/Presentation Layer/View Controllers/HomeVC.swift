@@ -100,6 +100,7 @@ class HomeVC: BaseClass {
 //            if IAPService.instance.isSubscriptionActive() {
 //                || !DataManager.shared.oneMonthCompleted() || DataManager.shared.totalRemainingFreeTime > 0 {
                 
+            
                 if selectedServer != nil {} else {
                     selectedServer = allServersList.last
                 }
@@ -107,7 +108,24 @@ class HomeVC: BaseClass {
                 self.loadProviderManager {
                     self.activityIndicatorView.startAnimating()
                     print(selectedServer)
-                    self.configureVPN(serverAddress: String(selectedServer.serverId.dropLast(4)), username: "zfzA9pY-VwKJh6Vw_RWIfZW1", password: "OSxVuIfTYWBKPIX1afZCUaph")
+                    let service = Bundle.main.bundleIdentifier ?? "app.vpnfast.com"
+                    
+                    let vpnUser: String? = KeychainHelper.shared.read(service: service, account: "vpn_username")
+                    let vpnPass: String? = KeychainHelper.shared.read(service: service, account: "vpn_password")
+                    
+                    guard let username = vpnUser, let password = vpnPass else {
+                        print("Error: No credentials found in Keychain.")
+                        return
+                    }
+                    
+                    self.configureVPN(
+                        serverAddress: String(selectedServer.serverId.dropLast(4)),
+                        username: username,
+                        password: password
+                    )
+                    
+                    
+                    
                 }
                 
 //            } else {
